@@ -1,0 +1,63 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+
+<head>
+
+    <title>Javascript Assignment Week3</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/
+handlebars.js/4.7.6/handlebars.min.js"></script>
+    <!-- <script type='text/javascript' src='assets/js/handlebars.js'></script> -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</head>
+
+<body>
+    <h1 id="widthheight"></h1>
+    <h1 id="portfolioTitle">Simone's Portfolio</h1>
+
+    <header>
+        <nav id="desktop">
+            <a href="">Projects</a>
+            <a href="">About</a>
+        </nav>
+
+        <nav id="mobile">
+            <a href="">Projects</a>
+        </nav>
+    </header>
+
+
+    <div class="websites-list">
+
+        <script id="my-template" type="text/x-handlebars-template">
+            {{#each data}}
+            <h1 class="portfolioListTitle">{{title}}</h1>
+
+            {{#each portfolio-content}}
+            <div class="website-container">
+                <img class="website-image" src="{{image}}" alt="404 Not Found">
+                <h5>{{time}}</h5>
+                <p>{{description}}</p>
+            </div>
+
+            {{/each}}
+
+            <div style="clear: both;"></div>
+
+            {{/each}}
+
+
+        </script>
+
+
+    </div>
+
+</body>
+
+</html>
